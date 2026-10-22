@@ -69,6 +69,15 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Access-Denied.aspx" />
+    <Content Include="Adopter\AdoptionApplication.aspx" />
+    <Content Include="Adopter\AdvancedSearch.aspx" />
+    <Content Include="Adopter\Catalogue.aspx" />
+    <Content Include="Adopter\Dashboard.aspx" />
+    <Content Include="Adopter\LikedPets.aspx" />
+    <Content Include="Adopter\MyApplication.aspx" />
+    <Content Include="Adopter\PetProfile.aspx" />
+    <Content Include="Adopter\Profile.aspx" />
+    <Content Include="Adopter\ShareTestimonial.aspx" />
     <Content Include="Catalogue.aspx" />
     <Content Include="css\style.css" />
     <Content Include="Default.aspx" />
@@ -100,6 +109,76 @@
     </Compile>
     <Compile Include="Access-Denied.aspx.designer.cs">
       <DependentUpon>Access-Denied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdopterMaster.Master.cs">
+      <DependentUpon>AdopterMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdopterMaster.Master.designer.cs">
+      <DependentUpon>AdopterMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Adopter\AdoptionApplication.aspx.cs">
+      <DependentUpon>AdoptionApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adopter\AdoptionApplication.aspx.designer.cs">
+      <DependentUpon>AdoptionApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adopter\AdvancedSearch.aspx.cs">
+      <DependentUpon>AdvancedSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adopter\AdvancedSearch.aspx.designer.cs">
+      <DependentUpon>AdvancedSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adopter\Catalogue.aspx.cs">
+      <DependentUpon>Catalogue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adopter\Catalogue.aspx.designer.cs">
+      <DependentUpon>Catalogue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adopter\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adopter\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adopter\LikedPets.aspx.cs">
+      <DependentUpon>LikedPets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adopter\LikedPets.aspx.designer.cs">
+      <DependentUpon>LikedPets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adopter\MyApplication.aspx.cs">
+      <DependentUpon>MyApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adopter\MyApplication.aspx.designer.cs">
+      <DependentUpon>MyApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adopter\PetProfile.aspx.cs">
+      <DependentUpon>PetProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adopter\PetProfile.aspx.designer.cs">
+      <DependentUpon>PetProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adopter\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adopter\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adopter\ShareTestimonial.aspx.cs">
+      <DependentUpon>ShareTestimonial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adopter\ShareTestimonial.aspx.designer.cs">
+      <DependentUpon>ShareTestimonial.aspx</DependentUpon>
     </Compile>
     <Compile Include="Catalogue.aspx.cs">
       <DependentUpon>Catalogue.aspx</DependentUpon>
@@ -153,6 +232,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdopterMaster.Master" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
@@ -161,6 +241,10 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\" />
+    <Folder Include="Owner\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

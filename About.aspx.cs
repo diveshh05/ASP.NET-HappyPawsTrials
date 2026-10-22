@@ -11,7 +11,7 @@ namespace HappyPaws
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Master.PageKey = "About";
+            Master.PageKey = "about";
         }
     }
 }
