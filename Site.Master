@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HappyPaws.Site" %>
+
+<!doctype html>
+<html lang="en">
+<head runat="server">
+    <%-- runat="server": ASP.NET can now fill <title> and resolve ~/ in <link> --%>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title></title><%-- left empty on purpose: each page's Title="..." fills it --%>
+
+    <%-- PASTE 1: your meta description, the 2 preconnect links, the Google Fonts link
+         and the bootstrap-icons link, all unchanged --%>
+
+
+    <meta name="description" content="HappyPaws Mauritius — pet adoption, surrender support and animal welfare events." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+
+    <link rel="stylesheet" href="~/css/style.css" />
+    <%-- ~/ = root of the site --%>
+</head>
+<body data-page="<%: PageKey %>">
+    <%-- your script.js reads this to highlight the active nav link --%>
+    <form id="form1" runat="server">
+        <%-- Web Forms rule: ONE server form wrapping the whole page --%>
+
+        <%-- PASTE 2: your whole <header class="site-header"> ... </header> --%>
+
+        <header class="site-header">
+            <nav class="nav shell" aria-label="Main navigation">
+                <a class="brand" href="Default.aspx" aria-label="HappyPaws home"><span class="brand-mark"><i class="bi bi-heart-fill"></i><i class="bi bi-paw-fill"></i></span><span>HappyPaws<small>Keep Your Pet Smiling</small></span></a>
+                <button
+                    class="nav-toggle"
+                    type="button"
+                    aria-label="Toggle menu"
+                    aria-expanded="false">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="nav-menu">
+                    <a data-page="home" href="Default.aspx">Home</a><a data-page="catalogue" href="Catalogue.aspx">Adopt a Pet</a><a data-page="events" href="Events.aspx">Events</a><a data-page="testimonials" href="Testimonials.aspx">Happy Tails</a><a data-page="about" href="About.aspx">About</a>
+                    <div class="nav-actions">
+                        <a class="btn btn-ghost" data-page="login" href="Login.aspx">Log in</a><a class="btn btn-dark" data-page="register" href="Register.aspx">Register</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <asp:ContentPlaceHolder ID="maincontent" runat="server"></asp:ContentPlaceHolder>
+
+        <%-- PASTE 3: your whole <footer class="footer"> ... </footer> --%>
+
+
+        <footer class="footer">
+            <div class="shell footer-grid">
+                <div>
+                    <a class="brand brand-light" href="Default.aspx"><span class="brand-mark"><i class="bi bi-paw-fill"></i></span><span>HappyPaws<small>Keep Your Pet Smiling</small></span></a>
+                    <p>Creating happier beginnings for animals across Mauritius.</p>
+                    <div class="social">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3>Quick links</h3>
+                    <a href="Catalogue.aspx">Find a pet</a><a href="Events.aspx">Upcoming events</a><a href="About.aspx">Surrender support</a>
+                </div>
+                <div>
+                    <h3>Visit us</h3>
+                    <p><i class="bi bi-geo-alt"></i>Royal Road, Moka, Mauritius</p>
+                    <p><i class="bi bi-telephone"></i>+230 460 7297</p>
+                    <p><i class="bi bi-envelope"></i>hello@happypaws.mu</p>
+                </div>
+                <div>
+                    <h3>Opening hours</h3>
+                    <p>
+                        Mon–Fri: 9:00–17:00<br />
+                        Saturday: 9:00–14:00<br />
+                        Sunday: By
+            appointment
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom shell">
+                <span>© 2025 HappyPaws Mauritius</span><span>Made with care for paws in need.</span>
+            </div>
+        </footer>
+
+    </form>
+    <script src="<%= ResolveUrl("~/js/script.js") %>"></script>
+</body>
+</html>
