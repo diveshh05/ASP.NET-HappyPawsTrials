@@ -12,7 +12,7 @@
                 <p>
                     Small moments and big milestones from pets who found their people.
                 </p>
-                <a class="btn btn-coral" href="access-denied.html">Share your story</a>
+                <a class="btn btn-coral" href="AccessDenied.aspx">Share your story</a>
             </div>
         </section>
         <section class="section shell">
@@ -88,7 +88,7 @@
                         Log in to share your favourite photo and inspire another adoption.
                     </p>
                 </div>
-                <a class="btn btn-dark" href="access-denied.html">Share your happy tail</a>
+                <a class="btn btn-dark" href="AccessDenied.aspx">Share your happy tail</a>
             </div>
         </section>
     </main>

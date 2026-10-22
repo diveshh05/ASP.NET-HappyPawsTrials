@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OwnerMaster.master.cs" Inherits="HappyPaws.OwnerMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <%-- runat="server": ASP.NET can now fill <title> and resolve ~/ in <link> --%>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title></title><%-- left empty on purpose: each page's Title="..." fills it --%>
+
+    <%-- PASTE 1: your meta description, the 2 preconnect links, the Google Fonts link
+         and the bootstrap-icons link, all unchanged --%>
+
+
+    <meta name="description" content="HappyPaws Mauritius — pet adoption, surrender support and animal welfare events." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+
+    <link rel="stylesheet" href="~/css/style.css" />
+    <%-- ~/ = root of the site --%>
+</head>
+
+
+<body data-page="<%: PageKey %>" class="owner-body">
+    <form id="form1" runat="server">
+        <header class="site-header owner-header">
+            <nav class="nav shell" aria-label="Pet owner navigation">
+                <a runat="server" class="brand" href="/Default.aspx" aria-label="HappyPaws home"><span class="brand-mark"><i class="bi bi-heart-fill"></i><i class="bi bi-paw-fill"></i></span><span>HappyPaws<small>Keep Your Pet Smiling</small></span></a>
+                <button
+                    class="nav-toggle"
+                    type="button"
+                    aria-label="Toggle menu"
+                    aria-expanded="false">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="nav-menu owner-nav">
+                    <a runat="server" data-page="owner-dashboard" href="/Owner/Dashboard.aspx">Dashboard</a><a runat="server" data-page="owner-surrender" href="/Owner/SurrenderRequest.aspx">Surrender a Pet</a><a runat="server" data-page="owner-requests" href="/Owner/MyRequests.aspx">My Requests</a><a runat="server" data-page="owner-tails" href="/Owner/ShareTestimonial.aspx">Happy Tails</a>
+                    <div class="user-menu">
+                        <button class="user-trigger" type="button" aria-expanded="false">
+                            <span class="avatar">PR</span><span>Hi, Priya <span class="wave">●</span></span><i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="user-dropdown">
+                            <a runat="server" href="/Owner/Profile.aspx"><i class="bi bi-person"></i>My Profile</a><a runat="server" href="/Default.aspx"><i class="bi bi-box-arrow-right"></i> Log out</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <asp:ContentPlaceHolder ID="maincontent" runat="server"></asp:ContentPlaceHolder>
+
+        <footer class="footer owner-footer">
+            <div class="shell owner-footer-row">
+                <a runat="server" class="brand brand-light" href="/Default.aspx"><span class="brand-mark"><i class="bi bi-paw-fill"></i></span><span>HappyPaws<small>Keep Your Pet Smiling</small></span></a>
+                <p>
+                    Need help?
+          <a href="mailto:hello@happypaws.mu">hello@happypaws.mu</a> · +230 460
+          7297
+                </p>
+                <p>© 2025 HappyPaws Mauritius</p>
+            </div>
+        </footer>
+
+    </form>
+    <script src="<%= ResolveUrl("~/js/script.js") %>"></script>
+</body>
+</html>
