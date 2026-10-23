@@ -84,6 +84,13 @@
     <Content Include="Events.aspx" />
     <Content Include="js\script.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Owner\Dashboard.aspx" />
+    <Content Include="Owner\EditRequest.aspx" />
+    <Content Include="Owner\MyRequests.aspx" />
+    <Content Include="Owner\Profile.aspx" />
+    <Content Include="Owner\RequestDetails.aspx" />
+    <Content Include="Owner\ShareTestimonial.aspx" />
+    <Content Include="Owner\SurrenderRequest.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Testimonials.aspx" />
     <Content Include="Uploads\Pets\biscuit.jpg" />
@@ -215,6 +222,55 @@
     <Compile Include="OwnerMaster.Master.designer.cs">
       <DependentUpon>OwnerMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="Owner\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Owner\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Owner\EditRequest.aspx.cs">
+      <DependentUpon>EditRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Owner\EditRequest.aspx.designer.cs">
+      <DependentUpon>EditRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Owner\MyRequests.aspx.cs">
+      <DependentUpon>MyRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Owner\MyRequests.aspx.designer.cs">
+      <DependentUpon>MyRequests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Owner\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Owner\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Owner\RequestDetails.aspx.cs">
+      <DependentUpon>RequestDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Owner\RequestDetails.aspx.designer.cs">
+      <DependentUpon>RequestDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Owner\ShareTestimonial.aspx.cs">
+      <DependentUpon>ShareTestimonial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Owner\ShareTestimonial.aspx.designer.cs">
+      <DependentUpon>ShareTestimonial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Owner\SurrenderRequest.aspx.cs">
+      <DependentUpon>SurrenderRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Owner\SurrenderRequest.aspx.designer.cs">
+      <DependentUpon>SurrenderRequest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -252,7 +308,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\" />
-    <Folder Include="Owner\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
