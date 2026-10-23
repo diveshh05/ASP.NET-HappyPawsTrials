@@ -105,6 +105,7 @@
             </div>
         </div>
     </form>
+    <asp:ContentPlaceHolder ID="scripts" runat="server"></asp:ContentPlaceHolder>  <%-- page-specific libraries go here --%>
     <script src="<%= ResolveUrl("~/js/script.js") %>"></script>
 </body>
 </html>
