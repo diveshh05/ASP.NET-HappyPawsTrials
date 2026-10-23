@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="HappyPaws.AdminMaster" %>
+
+<!doctype html>
+<html lang="en">
+<head runat="server">
+    <%-- runat="server": ASP.NET can now fill <title> and resolve ~/ in <link> --%>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title></title><%-- left empty on purpose: each page's Title="..." fills it --%>
+
+    <%-- PASTE 1: your meta description, the 2 preconnect links, the Google Fonts link
+     and the bootstrap-icons link, all unchanged --%>
+
+
+    <meta name="description" content="HappyPaws Mauritius — pet adoption, surrender support and animal welfare events." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+
+    <link rel="stylesheet" href="~/css/style.css" />
+    <%-- ~/ = root of the site --%>
+</head>
+<body data-page="<%: PageKey %>" class="admin-body">
+    <form id="form1" runat="server">
+        <div class="admin-layout">
+
+            <%-- PASTE 2: the whole <aside class="admin-sidebar"> ... </aside>
+                 and the <div class="admin-overlay" data-sidebar-close></div> line --%>
+
+
+            <aside class="admin-sidebar" id="adminSidebar">
+        <a runat="server" class="admin-brand" href="/Admin/Dashboard.aspx"
+          ><span class="brand-mark"><i class="bi bi-paw-fill"></i></span
+          ><span>HappyPaws<small>ADMIN CONSOLE</small></span></a
+        >
+        <nav aria-label="Admin navigation">
+          <a runat="server" data-page="admin-dashboard" href="/Admin/Dashboard.aspx"
+            ><i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span></a
+          ><a runat="server" data-page="admin-surrender" href="/Admin/SurrenderRequests.aspx"
+            ><i class="bi bi-life-preserver"></i
+            ><span>Surrender Requests</span></a
+          ><a runat="server" data-page="admin-adoptions" href="/Admin/AdoptionApplications.aspx"
+            ><i class="bi bi-house-heart"></i
+            ><span>Adoption Applications</span></a
+          ><a runat="server" data-page="admin-pets" href="/Admin/Pets.aspx"
+            ><i class="bi bi-paw-fill"></i><span>Pets</span></a
+          ><a runat="server" data-page="admin-types" href="/Admin/PetTypes.aspx"
+            ><i class="bi bi-tags"></i><span>Pet Types</span></a
+          ><a runat="server" data-page="admin-users" href="/Admin/Users.aspx"
+            ><i class="bi bi-people"></i><span>Users</span></a
+          ><a runat="server" data-page="admin-events" href="/Admin/Events.aspx"
+            ><i class="bi bi-calendar-event"></i><span>Events</span></a
+          ><a runat="server" data-page="admin-ads" href="/Admin/Advertisements.aspx"
+            ><i class="bi bi-megaphone"></i><span>Advertisements</span></a
+          ><a runat="server" data-page="admin-audit" href="/Admin/AuditLog.aspx"
+            ><i class="bi bi-shield-check"></i><span>Login Audit</span></a
+          >
+        </nav>
+        <a runat="server" class="sidebar-logout" href="/Default.aspx"
+          ><i class="bi bi-box-arrow-left"></i><span>Log out</span></a
+        >
+      </aside>
+
+
+
+            <div class="admin-workspace">
+
+                <%-- PASTE 3: the whole <header class="admin-topbar"> ... </header> --%>
+
+                <header class="admin-topbar">
+          <button
+            class="admin-menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+          <div><small>HappyPaws Administration</small><b>Hello, Admin</b></div>
+          <div class="topbar-actions">
+            <button
+              type="button"
+              class="admin-notification"
+              aria-label="Notifications"
+            >
+              <i class="bi bi-bell"></i><span>3</span></button
+            ><a runat="server" class="btn btn-ghost" href="/Default.aspx"
+              ><i class="bi bi-box-arrow-right"></i> Log out</a
+            >
+          </div>
+        </header>
+
+
+
+                <asp:ContentPlaceHolder ID="maincontent" runat="server"></asp:ContentPlaceHolder>
+
+                <%-- PASTE 4: the <footer class="admin-footer"> ... </footer> --%>
+
+                <footer class="admin-footer">
+          © 2025 HappyPaws Mauritius · Administration
+        </footer>
+
+            </div>
+        </div>
+    </form>
+    <script src="<%= ResolveUrl("~/js/script.js") %>"></script>
+</body>
+</html>

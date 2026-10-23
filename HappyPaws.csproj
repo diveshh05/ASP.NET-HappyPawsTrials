@@ -69,6 +69,15 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Access-Denied.aspx" />
+    <Content Include="Admin\AdoptionApplications.aspx" />
+    <Content Include="Admin\Advertisements.aspx" />
+    <Content Include="Admin\AuditLog.aspx" />
+    <Content Include="Admin\Dashboard.aspx" />
+    <Content Include="Admin\Events.aspx" />
+    <Content Include="Admin\Pets.aspx" />
+    <Content Include="Admin\PetTypes.aspx" />
+    <Content Include="Admin\SurrenderRequests.aspx" />
+    <Content Include="Admin\Users.aspx" />
     <Content Include="Adopter\AdoptionApplication.aspx" />
     <Content Include="Adopter\AdvancedSearch.aspx" />
     <Content Include="Adopter\Catalogue.aspx" />
@@ -116,6 +125,76 @@
     </Compile>
     <Compile Include="Access-Denied.aspx.designer.cs">
       <DependentUpon>Access-Denied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdoptionApplications.aspx.cs">
+      <DependentUpon>AdoptionApplications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdoptionApplications.aspx.designer.cs">
+      <DependentUpon>AdoptionApplications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Advertisements.aspx.cs">
+      <DependentUpon>Advertisements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Advertisements.aspx.designer.cs">
+      <DependentUpon>Advertisements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AuditLog.aspx.cs">
+      <DependentUpon>AuditLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AuditLog.aspx.designer.cs">
+      <DependentUpon>AuditLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Events.aspx.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Events.aspx.designer.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pets.aspx.cs">
+      <DependentUpon>Pets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pets.aspx.designer.cs">
+      <DependentUpon>Pets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PetTypes.aspx.cs">
+      <DependentUpon>PetTypes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PetTypes.aspx.designer.cs">
+      <DependentUpon>PetTypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SurrenderRequests.aspx.cs">
+      <DependentUpon>SurrenderRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SurrenderRequests.aspx.designer.cs">
+      <DependentUpon>SurrenderRequests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdopterMaster.Master.cs">
       <DependentUpon>AdopterMaster.Master</DependentUpon>
@@ -297,6 +376,7 @@
   <ItemGroup>
     <Content Include="AdopterMaster.Master" />
     <Content Include="OwnerMaster.Master" />
+    <Content Include="AdminMaster.Master" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
@@ -306,9 +386,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Admin\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
